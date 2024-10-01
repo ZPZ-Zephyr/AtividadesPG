@@ -37,7 +37,7 @@ int setupGeometry();
 const GLuint WIDTH = 800, HEIGHT = 600;
 
 // Código fonte do Vertex Shader (em GLSL): ainda hardcoded
-const GLchar* vertexShaderSource = "#version 400\n"
+const GLchar* vertexShaderSource = "#version 330\n"
 "layout (location = 0) in vec3 position;\n"
 "uniform mat4 projection;\n"
 "void main()\n"
@@ -47,7 +47,7 @@ const GLchar* vertexShaderSource = "#version 400\n"
 "}\0";
 
 //Códifo fonte do Fragment Shader (em GLSL): ainda hardcoded
-const GLchar* fragmentShaderSource = "#version 400\n"
+const GLchar* fragmentShaderSource = "#version 330\n"
 "uniform vec4 inputColor;\n"
 "out vec4 color;\n"
 "void main()\n"
@@ -120,7 +120,7 @@ int main()
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // cor de fundo
 	glClear(GL_COLOR_BUFFER_BIT);
 	glBindVertexArray(VAO); // Conectando ao buffer de geometria
-	glUniform4f(colorLoc, 1.0f, 0.0f, 1.0f, 1.0f); // enviando cor para variável uniform inputColor
+	glUniform4f(colorLoc, 1.0f, 1.0f, 1.0f, 1.0f); // enviando cor para variável uniform inputColor
 
 	// Loop da aplicação - "game loop"
 	while (!glfwWindowShouldClose(window))
