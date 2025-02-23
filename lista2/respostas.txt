@@ -1,0 +1,1 @@
+3. Agora os objetos param de ficar "esticados" devidos a adaptação correta para a resolução correspondente
